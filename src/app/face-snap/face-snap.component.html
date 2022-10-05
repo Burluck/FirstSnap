@@ -1,1 +1,13 @@
-<p>face-snap works!</p>
+<div class="face-snap-card">
+    <h2>{{faceSnap.title}}</h2>
+    <P>{{faceSnap.description}}</P>
+    <p *ngIf="faceSnap.location" > hey, I'm at {{faceSnap.location}} </p>
+    <img [src]="faceSnap.img" [alt]="faceSnap.title">
+    <P>{{faceSnap.createdDate}} </P>
+
+    <p>
+        <button (click)="onSnap()">{{buttonString}} </button>
+    </p>
+
+    <p>{{faceSnap.snaps}}</p>
+</div>
