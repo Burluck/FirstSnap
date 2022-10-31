@@ -12,7 +12,7 @@
         </div>
         <div class="form-group">
             <label for="imageUrl">URL de l'image</label>
-            <input id="imageUrl" type="text" formControlName="img">
+            <input id="imageUrl" type="text" formControlName="imageUrl">
         </div>
         <div class="form-group">
             <label for="location">Lieu</label>
@@ -28,7 +28,7 @@
     <h2>{{faceSnap.title | titlecase }}</h2>
     <P>{{faceSnap.description}}</P>
     <p *ngIf="faceSnap.location" > hey, I'm at {{faceSnap.location}} </p>
-    <img [src]="faceSnap.img" [alt]="faceSnap.title">
+    <img [src]="faceSnap.imageUrl" [alt]="faceSnap.title">
     <P>{{faceSnap.createdDate | date: 'd MMMM yyyy' }} </P>
     <span [ngStyle]="{color: 'rgb(0,'+ faceSnap.snaps + ', 0'}">{{faceSnap.snaps}}</span>
 </div>
